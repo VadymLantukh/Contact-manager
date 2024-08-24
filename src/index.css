@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  min-height: auto;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
