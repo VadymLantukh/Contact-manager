@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://66c770f5732bf1b79fa68c2a.mockapi.io/';
+axios.defaults.baseURL = 'https://connections-api.goit.global/';
 
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -13,9 +13,9 @@ const clearAuthHeader = () => {
 
 export const register = createAsyncThunk(
   'auth/register',
-  async (credetials, thunkAPI) => {
+  async (credentials, thunkAPI) => {
     try {
-      const response = await axios.post('/users/signup', credetials);
+      const response = await axios.post('/users/signup', credentials);
       setAuthHeader(response.data.token);
       return response.data;
     } catch (error) {
@@ -26,9 +26,9 @@ export const register = createAsyncThunk(
 
 export const logIn = createAsyncThunk(
   'auth/login',
-  async (credetials, thunkAPI) => {
+  async (credentials, thunkAPI) => {
     try {
-      const response = await axios.post('/users/login', credetials);
+      const response = await axios.post('/users/login', credentials);
       setAuthHeader(response.data.token);
       return response.data;
     } catch (error) {

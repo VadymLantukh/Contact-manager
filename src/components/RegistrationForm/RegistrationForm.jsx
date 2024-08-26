@@ -10,7 +10,7 @@ const RegistarationForm = () => {
     name: Yup.string().required('Required'),
     email: Yup.string().email('Enter email please').required('Required'),
     password: Yup.string()
-      .min(4, 'Must be at least 4 characters')
+      .min(7, 'Must be at least 7 characters')
       .required('Required'),
   });
 
@@ -20,31 +20,33 @@ const RegistarationForm = () => {
   };
 
   return (
-    <Formik
-      initialValues={{ name: '', email: '', password: '' }}
-      validationSchema={validationSchema}
-      onSubmit={handleSubmit}
-    >
-      <Form>
-        <label>
-          UserName
-          <Field type="text" name="name" />
-          <ErrorMessage name="name" component="div" />
-        </label>
-        <label>
-          Email
-          <Field type="email" name="email" />
-          <ErrorMessage name="email" component="div" />
-        </label>
-        <label>
-          Password
-          <Field type="password" name="password" />
-          <ErrorMessage name="password" component="div" />
-        </label>
+    <div>
+      <Formik
+        initialValues={{ name: '', email: '', password: '' }}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      >
+        <Form>
+          <label>
+            UserName
+            <Field type="text" name="name" />
+            <ErrorMessage name="name" component="div" />
+          </label>
+          <label>
+            Email
+            <Field type="email" name="email" />
+            <ErrorMessage name="email" component="div" />
+          </label>
+          <label>
+            Password
+            <Field type="password" name="password" />
+            <ErrorMessage name="password" component="div" />
+          </label>
 
-        <button type="submit">Register</button>
-      </Form>
-    </Formik>
+          <button type="submit">Register</button>
+        </Form>
+      </Formik>
+    </div>
   );
 };
 

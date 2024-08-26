@@ -4,6 +4,7 @@ import UserMenu from '../UserMenu/UserMenu';
 import Navigation from '../Navigation/Navigation';
 import AuthNav from '../AuthNav/AuthNav';
 
+
 const AppBar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
