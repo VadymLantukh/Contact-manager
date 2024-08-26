@@ -1,0 +1,24 @@
+.boxUserMenu {
+  display: flex;
+  gap: 30px;
+  color: rgb(240, 240, 210);
+  align-items: center;
+}
+
+.titleName {
+  font-size: 18px;
+}
+
+.btnLogOut {
+  border-radius: 8px;
+  width: 100px;
+  height: 30px;
+  font-size: 18px;
+  color: rgb(200, 40, 40);
+  transition: all 350ms linear;
+  background-color: rgb(240, 240, 210);
+}
+
+.btnLogOut:hover {
+  background-color: rgb(90, 90, 90)
+}

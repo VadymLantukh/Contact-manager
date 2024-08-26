@@ -1,0 +1,14 @@
+.boxHome {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.titleHome {
+  font-size: 44px;
+}
+
+.textHome {
+  font-size: 26px;
+}

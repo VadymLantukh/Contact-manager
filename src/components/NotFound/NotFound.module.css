@@ -1,0 +1,23 @@
+.boxNotFound {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.textNotFound {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.linkGoBack {
+  color: rgb(40, 40, 40);
+  font-size: 22px;
+  transition: all 250ms linear;
+}
+
+.linkGoBack:hover {
+  transform: scale(1.05);
+}

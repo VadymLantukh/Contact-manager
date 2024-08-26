@@ -5,6 +5,7 @@ import Filter from '../../components/Filter/Filter';
 import { selectIsLoading } from '../../redux/contacts/selectors';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/operations';
+import css from './Contacts.module.css';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -15,10 +16,10 @@ const Contacts = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <h2>PhoneBook</h2>
+    <div className={css.boxContacts}>
+      <h2 className={css.titleCon}>PhoneBook</h2>
       <ContactForm />
-      <h2>Contacts</h2>
+      <h2 className={css.titleConList}>Contacts</h2>
       <Filter />
       {isLoading && <p>Loading contacts</p>}
       <ContactList />

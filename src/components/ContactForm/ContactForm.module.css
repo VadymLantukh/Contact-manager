@@ -1,41 +1,35 @@
-.boxLogForm {
+.boxContactForm {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin: 0 auto;
   width: 500px;
   height: 200px;
+  flex-direction: column;
+  gap: 26px;
+  justify-content: center;
+  font-size: 18px;
+  margin: 0 auto;
   box-shadow: 13px 13px 20px #9f9f9f, -13px -13px 20px #ffffff;
   border-radius: 22px;
   background-color: rgb(200, 40, 40);
   color: rgb(240, 240, 210);
+  margin-bottom: 60px;
 }
 
-.divField {
+.labelContactForm {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 30px;
-}
-
-.labelLogForm {
+  justify-content: center;
   font-size: 18px;
-  display: flex;
-  align-items: center;
 }
 
-.fieldLogForm {
-  padding: 0 10px;
+.fieldContactForm {
   border-radius: 8px;
-  height: 30px;
-  margin-left: 6px;
+  margin-left: 8px;
   margin-right: 10px;
-  width: 100%;
+  padding: 0 10px;
+  height: 30px;
 }
 
-.btnLogIn {
+.btnConForm {
   width: 200px;
   border-radius: 8px;
   height: 30px;
@@ -43,8 +37,9 @@
   background-color: rgb(240, 240, 210);
   transition: all 350ms linear;
   color: rgb(200, 40, 40);
+  margin: 0 auto;
 }
 
-.btnLogIn:hover {
+.btnConForm:hover {
   background-color: rgb(90, 90, 90);
 }

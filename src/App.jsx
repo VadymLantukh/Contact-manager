@@ -6,6 +6,7 @@ import Layout from './components/Layout/Layout';
 import RestrictedRoute from './components/RestrictedRoute/RestrictedRoute';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import { refreshUser } from './redux/auth/operations';
+import NotFound from './components/NotFound/NotFound';
 
 const HomePage = lazy(() => import('./pages/Home/Home'));
 const RegisterPage = lazy(() => import('./pages/Register/Register'));
@@ -48,6 +49,7 @@ function App() {
           }
         />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }

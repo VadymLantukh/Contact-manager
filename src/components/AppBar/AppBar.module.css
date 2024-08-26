@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  padding: 0 30px;
+  gap: 30px;
+  justify-content: space-around;
+  background-color: rgb(200, 40, 40);
+  align-items: center;
+  min-height: 50px;
+  margin-bottom: 80px;
+}

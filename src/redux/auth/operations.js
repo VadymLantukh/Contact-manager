@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 axios.defaults.baseURL = 'https://connections-api.goit.global/';
 
@@ -30,8 +31,19 @@ export const logIn = createAsyncThunk(
     try {
       const response = await axios.post('/users/login', credentials);
       setAuthHeader(response.data.token);
+      toast.success('Logged in successfully 👌');
       return response.data;
     } catch (error) {
+      if (error.response) {
+        switch (error.response.status) {
+          case 400:
+            toast.error('Invalid email or password 😿');
+            break;
+          default:
+            toast.error('Internal Server Error 💔');
+        }
+      }
+
       return thunkAPI.rejectWithValue(error.message);
     }
   }

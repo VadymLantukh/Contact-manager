@@ -1,0 +1,14 @@
+.boxAuthNav {
+  display: flex;
+  gap: 40px;
+}
+
+.AuthNavLink {
+  color: rgb(240, 240, 210);
+  transition: all 250ms linear;
+  font-size: 20px;
+}
+
+.AuthNavLink:hover {
+  transform: scale(1.05);
+}

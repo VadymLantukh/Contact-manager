@@ -1,0 +1,35 @@
+.contactsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contactsItem {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 50px;
+  box-shadow: 13px 13px 20px #9f9f9f, -13px -13px 20px #ffffff;
+  border-radius: 8px;
+  background-color: rgb(200, 40, 40);
+  color: rgb(240, 240, 210);
+  font-size: 18px;
+  padding: 20px 0;
+}
+
+.btnDelete {
+  width: 100%;
+  border-radius: 8px;
+  height: 30px;
+  font-size: 18px;
+  background-color: rgb(240, 240, 210);
+  transition: all 350ms linear;
+  color: rgb(200, 40, 40);
+}
+
+.btnDelete:hover {
+  background-color: rgb(90, 90, 90);
+}
