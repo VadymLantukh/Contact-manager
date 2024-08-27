@@ -1,0 +1,9 @@
+.refreshLoad {
+  gap: 10px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:  22px;
+  color: rgb(200, 40, 40);
+}

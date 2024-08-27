@@ -11,3 +11,9 @@
 .titleConList {
   margin-bottom: 10px;
 }
+
+.boxSpinners {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 13px;
+}

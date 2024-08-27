@@ -6,7 +6,11 @@
 }
 
 .titleName {
+  padding: 5px 8px;
   font-size: 18px;
+  box-shadow: 2px 2px 5px #9f9f9f, -2px -2px 5px #ffffff;
+  border-radius: 22px;
+  background-color: rgb(200, 40, 40);
 }
 
 .btnLogOut {

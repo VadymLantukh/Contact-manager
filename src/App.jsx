@@ -7,6 +7,8 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import { refreshUser } from './redux/auth/operations';
 import NotFound from './components/NotFound/NotFound';
 import PublicRoute from './components/PublicRoute/PublicRoute';
+import css from './App.module.css';
+import { BounceLoader } from 'react-spinners';
 
 const HomePage = lazy(() => import('./pages/Home/Home'));
 const RegisterPage = lazy(() => import('./pages/Register/Register'));
@@ -22,7 +24,10 @@ function App() {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <p>Please wait refreshing user...</p>
+    <div className={css.refreshLoad}>
+      Please wait refreshing user...
+      <BounceLoader color="#F02828" size="26" />
+    </div>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>

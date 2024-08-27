@@ -9,7 +9,6 @@ const Login = () => {
   if (isLoggedIn) {
     return <Navigate to="/contacts" />;
   }
-
   return (
     <div>
       <DocumentTitle>Login</DocumentTitle>

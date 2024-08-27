@@ -32,12 +32,18 @@ const LoginForm = () => {
           </label>
           <label className={css.labelLogForm}>
             Password:
-            <Field className={css.fieldLogForm} type="password" name="password" />
+            <Field
+              className={css.fieldLogForm}
+              type="password"
+              name="password"
+            />
             <ErrorMessage name="password" component="div" />
           </label>
         </div>
 
-        <button className={ css.btnLogIn} type="submit">Log In</button>
+        <button className={css.btnLogIn} type="submit">
+          Log In
+        </button>
       </Form>
     </Formik>
   );

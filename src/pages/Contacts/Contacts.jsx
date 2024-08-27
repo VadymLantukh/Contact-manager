@@ -6,6 +6,7 @@ import { selectIsLoading } from '../../redux/contacts/selectors';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/operations';
 import css from './Contacts.module.css';
+import { SyncLoader } from 'react-spinners';
 
 const Contacts = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,11 @@ const Contacts = () => {
       <ContactForm />
       <h2 className={css.titleConList}>Contacts</h2>
       <Filter />
-      {isLoading && <p>Loading contacts</p>}
+      {isLoading && (
+        <div className={css.boxSpinners}>
+          <SyncLoader color="#F02828" size="16" />
+        </div>
+      )}
       <ContactList />
     </div>
   );

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
 
 .titleHome {
@@ -11,4 +11,13 @@
 
 .textHome {
   font-size: 26px;
+}
+
+.textNavigate {
+  font-size: 22px;
+}
+
+.linkHome {
+  color: rgb(200, 40, 40);
+  padding: 0 6px;
 }

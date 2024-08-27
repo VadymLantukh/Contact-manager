@@ -3,6 +3,7 @@ import { selectFindingContacts } from '../../redux/contacts/selectors';
 import { useEffect } from 'react';
 import { deleteContact, fetchContacts } from '../../redux/contacts/operations';
 import css from './ContactList.module.css';
+import { BsTelephoneFill } from 'react-icons/bs';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -16,8 +17,16 @@ const ContactList = () => {
     <ul className={css.contactsList}>
       {contacts.map(contact => (
         <li className={css.contactsItem} key={contact.id}>
-          {contact.name}: {contact.number}
-          <button className={ css.btnDelete} onClick={() => dispatch(deleteContact(contact.id))}>
+          <div className={css.boxIcon}>
+            <span>
+              <BsTelephoneFill className={css.iconContact} />
+            </span>
+            {contact.name}: {contact.number}
+          </div>
+          <button
+            className={css.btnDelete}
+            onClick={() => dispatch(deleteContact(contact.id))}
+          >
             Delete
           </button>
         </li>
