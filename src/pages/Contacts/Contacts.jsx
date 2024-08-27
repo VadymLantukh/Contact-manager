@@ -24,7 +24,7 @@ const Contacts = () => {
       <Filter />
       {isLoading && (
         <div className={css.boxSpinners}>
-          <SyncLoader color="#F02828" size="16" />
+          <SyncLoader color="#F02828" size="16px" />
         </div>
       )}
       <ContactList />

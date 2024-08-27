@@ -8,8 +8,8 @@ const LoginForm = () => {
   const dispatch = useDispatch();
 
   const validationSchema = Yup.object({
-    email: Yup.string().email('Invalid email').required('Required'),
-    password: Yup.string().required('Required'),
+    email: Yup.string().email('Invalid email').required('⚠️'),
+    password: Yup.string().required('⚠️'),
   });
 
   const handleSubmit = (values, action) => {
@@ -28,7 +28,7 @@ const LoginForm = () => {
           <label className={css.labelLogForm}>
             Email:
             <Field className={css.fieldLogForm} type="email" name="email" />
-            <ErrorMessage name="email" component="div" />
+            <ErrorMessage className={css.errorLoginForm} name="email" component="div" />
           </label>
           <label className={css.labelLogForm}>
             Password:
@@ -37,7 +37,7 @@ const LoginForm = () => {
               type="password"
               name="password"
             />
-            <ErrorMessage name="password" component="div" />
+            <ErrorMessage className={css.errorLoginForm} name="password" component="div" />
           </label>
         </div>
 

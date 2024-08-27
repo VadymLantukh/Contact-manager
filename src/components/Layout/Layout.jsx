@@ -13,7 +13,7 @@ const Layout = () => {
       <Suspense
         fallback={
           <div className={css.boxSpinners}>
-            <SyncLoader color="#F02828" size="20" />
+            <SyncLoader color="#F02828" size="20px" />
           </div>
         }
       >

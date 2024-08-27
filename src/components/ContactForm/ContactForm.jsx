@@ -6,8 +6,8 @@ import css from './ContactForm.module.css';
 
 const ContactForm = () => {
   const validationSchema = Yup.object({
-    name: Yup.string().required('Required'),
-    number: Yup.string().required('Required'),
+    name: Yup.string().required('⚠️'),
+    number: Yup.string().required('⚠️'),
   });
 
   const dispatch = useDispatch();
@@ -27,12 +27,12 @@ const ContactForm = () => {
         <label className={css.labelContactForm}>
           Name
           <Field className={css.fieldContactForm} type="text" name="name" />
-          <ErrorMessage name="name" component="div" />
+          <ErrorMessage className={css.errorContactForm}  name="name" component="div" />
         </label>
         <label className={css.labelContactForm}>
           Number
           <Field className={css.fieldContactForm} type="tel" name="number" />
-          <ErrorMessage name="number" component="div" />
+          <ErrorMessage className={css.errorContactForm} name="number" component="div" />
         </label>
 
         <button className={css.btnConForm} type="submit">

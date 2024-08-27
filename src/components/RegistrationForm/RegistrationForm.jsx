@@ -8,11 +8,9 @@ const RegistarationForm = () => {
   const dispatch = useDispatch();
 
   const validationSchema = Yup.object({
-    name: Yup.string().required('Required'),
-    email: Yup.string().email('Enter email please').required('Required'),
-    password: Yup.string()
-      .min(7, 'Min 7 characters')
-      .required('Required'),
+    name: Yup.string().required('⚠️'),
+    email: Yup.string().email('Enter email please').required('⚠️'),
+    password: Yup.string().min(7, 'Min 7 characters').required('⚠️'),
   });
 
   const handleSubmit = (values, action) => {

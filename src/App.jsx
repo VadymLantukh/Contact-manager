@@ -26,7 +26,7 @@ function App() {
   return isRefreshing ? (
     <div className={css.refreshLoad}>
       Please wait refreshing user...
-      <BounceLoader color="#F02828" size="26" />
+      <BounceLoader color="#F02828" size="26px" />
     </div>
   ) : (
     <Routes>
