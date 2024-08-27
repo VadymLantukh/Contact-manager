@@ -4,7 +4,7 @@ import { SyncLoader } from 'react-spinners';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import AppBar from '../AppBar/AppBar';
-import css from './Layout.module.css'
+import css from './Layout.module.css';
 
 const Layout = () => {
   return (
