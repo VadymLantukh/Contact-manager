@@ -1,10 +1,11 @@
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 
-const PrivateRoute = ({ component: Component, redirectTo = '/' }) => {
+const PrivateRoute = ({ children }) => {
   const { isLoggedIn } = useAuth();
+  const location = useLocation();
 
-  return isLoggedIn ? Component : <Navigate to={redirectTo} />;
+  return isLoggedIn ? children : <Navigate to='/login' state={location} />;
 };
 
 export default PrivateRoute;

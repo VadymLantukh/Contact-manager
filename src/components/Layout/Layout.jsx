@@ -11,7 +11,7 @@ const Layout = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
-      <Toaster position="top-right" reverseOrder={false} />
+      <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
 };
