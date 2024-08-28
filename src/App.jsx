@@ -2,13 +2,15 @@ import { useDispatch } from 'react-redux';
 import { lazy, useEffect } from 'react';
 import { useAuth } from './hooks/useAuth';
 import { Route, Routes } from 'react-router-dom';
+import { BounceLoader } from 'react-spinners';
+import { refreshUser } from './redux/auth/operations';
+
 import Layout from './components/Layout/Layout';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-import { refreshUser } from './redux/auth/operations';
 import NotFound from './components/NotFound/NotFound';
 import PublicRoute from './components/PublicRoute/PublicRoute';
 import css from './App.module.css';
-import { BounceLoader } from 'react-spinners';
+
 
 const HomePage = lazy(() => import('./pages/Home/Home'));
 const RegisterPage = lazy(() => import('./pages/Register/Register'));
