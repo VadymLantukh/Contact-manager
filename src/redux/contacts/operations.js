@@ -32,7 +32,7 @@ export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async (id, thunkAPI) => {
     try {
-      await axios.delete(`./contacts/${id}`);
+      await axios.delete(`/contacts/${id}`);
       toast.success('Contact delete 👻');
       return id;
     } catch (error) {
