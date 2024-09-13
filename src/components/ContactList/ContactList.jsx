@@ -1,8 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { BsTelephoneFill } from 'react-icons/bs';
+
 import { selectFindingContacts } from '../../redux/contacts/selectors';
 import { deleteContact } from '../../redux/contacts/operations';
 import css from './ContactList.module.css';
-import { BsTelephoneFill } from 'react-icons/bs';
 
 const ContactList = () => {
   const dispatch = useDispatch();

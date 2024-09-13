@@ -1,4 +1,5 @@
 import { Navigate } from 'react-router-dom';
+
 import RegistarationForm from '../../components/RegistrationForm/RegistrationForm';
 import DocumentTitle from '../../DocumentTitle';
 import { useAuth } from '../../hooks/useAuth';
