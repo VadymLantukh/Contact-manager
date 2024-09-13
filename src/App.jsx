@@ -11,7 +11,6 @@ import NotFound from './components/NotFound/NotFound';
 import PublicRoute from './components/PublicRoute/PublicRoute';
 import css from './App.module.css';
 
-
 const HomePage = lazy(() => import('./pages/Home/Home'));
 const RegisterPage = lazy(() => import('./pages/Register/Register'));
 const LoginPage = lazy(() => import('./pages/Login/Login'));
