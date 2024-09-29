@@ -31,12 +31,20 @@ const RegistarationForm = () => {
             <label className={css.labelRegForm}>
               UserName:
               <Field className={css.fieldRegForm} type="text" name="name" />
-              <ErrorMessage name="name" component="div" />
+              <ErrorMessage
+                className={css.errorMessageRegister}
+                name="name"
+                component="div"
+              />
             </label>
             <label className={css.labelRegForm}>
               Email:
               <Field className={css.fieldRegForm} type="email" name="email" />
-              <ErrorMessage name="email" component="div" />
+              <ErrorMessage
+                className={css.errorMessageRegister}
+                name="email"
+                component="div"
+              />
             </label>
             <label className={css.labelRegForm}>
               Password:
@@ -45,7 +53,11 @@ const RegistarationForm = () => {
                 type="password"
                 name="password"
               />
-              <ErrorMessage name="password" component="div" />
+              <ErrorMessage
+                className={css.errorMessageRegister}
+                name="password"
+                component="div"
+              />
             </label>
 
             <button className={css.btnRegForm} type="submit">

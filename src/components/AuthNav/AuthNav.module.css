@@ -3,12 +3,23 @@
   gap: 40px;
 }
 
-.AuthNavLink {
-  color: rgb(240, 240, 210);
-  transition: all 250ms linear;
-  font-size: 20px;
+.active {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  background-color: rgb(240, 240, 210);
+  color: rgb(200, 40, 40);
+  height: 50px;
 }
 
-.AuthNavLink:hover {
+.inactive {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: transform 250ms linear;
+  color: rgb(240, 240, 210);
+}
+
+.inactive:hover {
   transform: scale(1.05);
 }

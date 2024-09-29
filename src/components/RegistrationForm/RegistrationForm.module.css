@@ -23,6 +23,7 @@
 .labelRegForm {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .fieldRegForm {
@@ -47,4 +48,9 @@
 
 .btnRegForm:hover {
   background-color: rgb(90, 90, 90);
+}
+
+.errorMessageRegister {
+  position: absolute;
+  right: 15px;
 }
