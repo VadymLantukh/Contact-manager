@@ -3,7 +3,7 @@
 **Contacts-manager** - This SPA website is built on React for adding, deleting,
 and searching contacts . [View project](https://goit-react-hw-08-pink-seven.vercel.app/)
 
-**API** - I used the [Custom APi](https://connections-api.goit.global), I used
+**API** - I used the [Contacts API](https://connections-api.goit.global), I used
 this API for: registration, authorization, saving tokens, receiving contacts.
 [documentation API](https://connections-api.goit.global/docs/)
 
