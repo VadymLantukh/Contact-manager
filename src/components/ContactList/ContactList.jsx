@@ -1,17 +1,21 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { BsTelephoneFill } from 'react-icons/bs';
 
-import { selectFindingContacts } from '../../redux/contacts/selectors';
+import {
+  selectContacts,
+  selectFindingContacts,
+} from '../../redux/contacts/selectors';
 import { deleteContact } from '../../redux/contacts/operations';
 import css from './ContactList.module.css';
 
 const ContactList = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(selectFindingContacts);
+  const contacts = useSelector(selectContacts);
+  const contactsFilter = useSelector(selectFindingContacts);
 
-  return (
+  return contacts.length > 0 ? (
     <ul className={css.contactsList}>
-      {contacts.map(contact => (
+      {contactsFilter.map(contact => (
         <li className={css.contactsItem} key={contact.id}>
           <div className={css.boxIcon}>
             <span>
@@ -28,6 +32,10 @@ const ContactList = () => {
         </li>
       ))}
     </ul>
+  ) : (
+    <p className={css.warningList}>
+      You havent added anything to the list of conacts yet
+    </p>
   );
 };
 

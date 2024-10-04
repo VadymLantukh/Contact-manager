@@ -52,5 +52,6 @@
 
 .errorMessageRegister {
   position: absolute;
+  color: red;
   right: 15px;
 }

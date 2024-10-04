@@ -3,6 +3,7 @@
   width: 500px;
   height: 200px;
   flex-direction: column;
+  align-items: center;
   gap: 26px;
   justify-content: center;
   font-size: 18px;
@@ -14,17 +15,24 @@
   margin-bottom: 60px;
 }
 
+.boxLabels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
 .labelContactForm {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   font-size: 18px;
 }
 
 .fieldContactForm {
   border-radius: 8px;
-  margin-left: 8px;
-  margin-right: 10px;
+  margin-left: 8px; 
   padding: 0 10px;
   height: 30px;
 }
@@ -45,5 +53,7 @@
 }
 
 .errorContactForm {
-  color: rgb(30, 30, 30);
+  position: absolute;
+  color: red;
+  right: 10px;
 }

@@ -25,16 +25,26 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
     >
       <Form className={css.boxContactForm}>
-        <label className={css.labelContactForm}>
-          Name
-          <Field className={css.fieldContactForm} type="text" name="name" />
-          <ErrorMessage className={css.errorContactForm}  name="name" component="div" />
-        </label>
-        <label className={css.labelContactForm}>
-          Number
-          <Field className={css.fieldContactForm} type="tel" name="number" />
-          <ErrorMessage className={css.errorContactForm} name="number" component="div" />
-        </label>
+        <div className={css.boxLabels}>
+          <label className={css.labelContactForm}>
+            Name
+            <Field className={css.fieldContactForm} type="text" name="name" />
+            <ErrorMessage
+              className={css.errorContactForm}
+              name="name"
+              component="div"
+            />
+          </label>
+          <label className={css.labelContactForm}>
+            Number
+            <Field className={css.fieldContactForm} type="tel" name="number" />
+            <ErrorMessage
+              className={css.errorContactForm}
+              name="number"
+              component="div"
+            />
+          </label>
+        </div>
 
         <button className={css.btnConForm} type="submit">
           Add contact
