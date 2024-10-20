@@ -7,4 +7,5 @@
   align-items: center;
   min-height: 50px;
   margin-bottom: 80px;
+  box-shadow: 9px 9px 12px #c7c7c7, -9px -9px 12px #f9f9f9;
 }
